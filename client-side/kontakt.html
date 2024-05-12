@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<meta http-equiv="refresh" content="100">-->
+        <title>Krabopedia</title>
+        <link href="styles/style.css" rel="stylesheet">
+		<link href="styles/jquery-ui.css" rel="stylesheet">
+        <noscript>
+            <link href="styles/noscript.css" rel="stylesheet">
+        </noscript>
+        <link href="images/crab2.jpg" rel="icon" type="image/jpg">
+    </head>
+    <body>
+        <a id="top"></a>
+        <header class="intro">
+            <h1>Krabopedia</h1>
+        </header>
+        <nav class="menu">
+            <button class="btn-toggle">Zmień motyw strony</button>
+            <a class="btn-toggle" id="session-time">0:00</a>
+            <a href="index.html" class="menu" id="important">Strona główna</a>
+            <a href="galeria.html" class="menu">Galeria</a>
+            <a href="kontakt.html" class="menu">Kontakt</a>
+        </nav>
+
+        <section class="content">
+			Wyślij nam zdjęcia swoich krabów.
+			<h2>Fomularz kontaktowy</h2>
+			
+            <form action="send.php" method="POST" enctype=multipart/form-data>
+			<div>
+				<label class="form-label" for="name">Imię:</label>
+				<input type="text" name="name" id="name" class="ui-button">
+			</div>
+			<div>
+				<label class="form-label" for="surname">Nazwisko:</label>
+				<input type="text" name="surname" id="surname" class="ui-button">
+			</div>
+			<div>
+				<label class="form-label">Płeć:</label>
+				<input type="radio" name="gender" id="male" checked="checked" class="ui-button">
+				<label for="male">Mężczyzna</label>
+				<input type="radio" name="gender" id="female" class="ui-button" class="ui-button">
+				<label for="female">Kobieta</label>
+			</div>
+			<div>
+			<label class="form-label" for="age">Wiek:</label>
+				<input type="number" name="age" id="age" min="0" max="100" title="prosimy o twoj wiek do celow statystycznych" class="ui-button">
+			</div>
+			<div>
+				<label class="form-label" for="living-place">Kraj zamieszkania:</label>
+				<select name="living-place" id="living-place" title="prosimy o twoj kraj zamieszkania do celow statystycznych" class="ui-button">
+					<option value="Jamajka" selected="selected">Jamajka</option>
+					<option value="Australia">Australia</option>
+					<option value="Nowa-Zelandia">Nowa Zelandia</option>
+					<option value="Polska">Polska</option>
+					<option value="Argentyna">Argentyna</option>
+					<option value="Watykan">Watykan</option>
+					<option value="Ekwador">Ekwador</option>
+					<option value="Łotwa">Łotwa</option>
+					<option value="Dania">Dania</option>
+					<option value="Rosja">Rosja</option>
+					<option value="Urugwaj">Urugwaj</option>
+					<option value="Grecja">Grecja</option>
+					<option value="other">Inny</option>
+				</select>
+			</div>
+			<div>
+				<label class="form-label" for="email">Email:</label>
+				<input type="email" name="email" id="email" required class="ui-button">
+			</div>
+			<div>
+				<label class="form-label" for="file">Zdjęcia twojego kraba:</label>
+				<input type="file" name="file" id="file" required class="ui-button">
+			</div>
+			<div>
+				<label class="form-label" for="tel">Nr telefonu:</label>
+				<input type="tel" name="tel" id="tel" title="prosimy o twoj nr telefonu do celow statystycznych" class="ui-button">
+			</div>
+			<br>
+			<div>
+				<input type="submit" value="Prześlij" class="form-button">
+				<input type="reset" value="Wyczyść formularz" class="form-button">
+			</div>
+		</form>
+        </section>
+		<br>
+        <footer>
+            © Pawel Pstragowski 2022<br>
+            <a href="#top">Wróć do góry strony</a>
+        </footer>
+		<script src="scripts/jquery-3.6.1.min.js"></script>
+		<script src="scripts/jquery-ui.js"></script>
+		<script src="scripts/main.js"></script>
+		<script> 
+  			$( function() {
+    			$( document ).tooltip();
+  			} );
+		</script>
+    </body>
+</html>
